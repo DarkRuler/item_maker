@@ -110,7 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="item_csv_maker.cpp" />
+    <ClCompile Include="item_csv_parser.cpp" />
+    <ClCompile Include="items_info.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source_code_provider.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="item_csv_maker.h" />
+    <ClInclude Include="item_csv_parser.h" />
+    <ClInclude Include="items_info.h" />
+    <ClInclude Include="source_code_provider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
