@@ -8,17 +8,32 @@ namespace item_maker_excel
 {
     public class utility
     {
+        public static String show_open_dialog(String filter, int index)
+        {
+            var open_dialog = new System.Windows.Forms.OpenFileDialog();
+
+            open_dialog.Filter = filter;
+            open_dialog.FilterIndex = index;
+            open_dialog.RestoreDirectory = true;
+
+            if (open_dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                return open_dialog.FileName;
+            }
+            else return "";
+        }
+
         public static String show_save_dialog(String filter, int index)
         {
-            var file_dialog = new System.Windows.Forms.SaveFileDialog();
+            var save_dialog = new System.Windows.Forms.SaveFileDialog();
 
-            file_dialog.Filter = filter;
-            file_dialog.FilterIndex = index;
-            file_dialog.RestoreDirectory = true;
+            save_dialog.Filter = filter;
+            save_dialog.FilterIndex = index;
+            save_dialog.RestoreDirectory = true;
 
-            if (file_dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (save_dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                return file_dialog.FileName;
+                return save_dialog.FileName;
             }
             else return "";
         }
