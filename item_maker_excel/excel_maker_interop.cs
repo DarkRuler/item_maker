@@ -24,15 +24,13 @@ namespace item_maker_excel
             project.VBComponents.Remove(component);
            
             String xlsx_filename = utility.show_save_dialog("Excel Workbook (*.xlsx)|*.xlsx|All Files (*.*)|*.*", 1);           
-            workbook.SaveAs(xlsx_filename);
+            if (xlsx_filename != "") workbook.SaveAs(xlsx_filename);
 
             workbook.Close();
             excel.Quit();
 
             Marshal.ReleaseComObject(workbook);
             Marshal.ReleaseComObject(excel);
-        }
-
-        
+        }        
     }
 }

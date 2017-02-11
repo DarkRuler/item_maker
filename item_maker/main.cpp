@@ -5,9 +5,9 @@
 #include "file_dialog.h"
 
 int main(int argc, char** argv)
-{
-	/*std::string source_code = io_access::from_file("ATG_-_Revive.flr");*/
+{	
 	std::string source_code = file_dialog::open_file();
+	if (source_code == "") return -1;
 
 	auto _item_csv_maker = item_csv_maker();
 	_item_csv_maker.provide_source_code(std::move(source_code));
