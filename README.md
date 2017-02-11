@@ -50,8 +50,7 @@ Since it's very outdated, I've decided to not only update it, but make the whole
 - Microsoft Excel;
 - .NET Framework (compiled for .NET 4.0).
 
-***Warning: I just guess these requirements and I will determine exact requirements when I have access to another machine with Excel.***
+***Warning: I think these requirements are correct; I will determine exact requirements when I have access to another machine with Excel.***
 
 ## Links list:
-
-- 
+- [folder with generated spreadsheets](https://drive.google.com/drive/folders/0B3BzoLHkt-KAeE5kRzNEMk45amM)
