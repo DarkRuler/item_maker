@@ -1,6 +1,5 @@
 #include "file_dialog.h"
 #include "io_access.h"
-#include <shobjidl.h> 
 
 std::string file_dialog::open_file()
 {
@@ -21,6 +20,7 @@ std::string file_dialog::open_file()
 	{
 		return io_access::from_file(std::string(szFileName));
 	}
+	else return "";
 }
 
 void file_dialog::save_as(std::string data)

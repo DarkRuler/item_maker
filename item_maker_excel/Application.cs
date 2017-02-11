@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace item_maker_excel
 {
-    class Application
+    public class application
     {
-        static void Main(string[] arguments)
+        [STAThread]
+        static void Main(string[] parameters)
         {
-
+            String csv_filename = utility.show_save_dialog("Comma-Separated Values (*.csv)|*.csv|All Files (*.*)|*.*", 1);
+            excel_maker_interop.make_excel_file(csv_filename);
         }
     }
 }
