@@ -21,7 +21,8 @@ Since it's very outdated, I've decided to not only update it, but make the whole
   - Tukkun breaking structure of the code;
   - your PC not satisfying **Requirements**;
   - something machine-dependent I couldn't possibly predict.
-- If 
+- If you want to suggest something, you can use **Issues** or forum thread (I know **Issues** should not be used for that, but whatever). The forum thread is also perfect place for user-made charts and rankings.
+
 ## Technical info:
 
 ### Target functionalities of programs:
