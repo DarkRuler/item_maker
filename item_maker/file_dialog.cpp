@@ -38,7 +38,7 @@ void file_dialog::save_as(std::string data)
 	open_filename.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 	open_filename.lpstrDefExt = "csv";
 
-	if (GetOpenFileName(&open_filename))
+	if (GetSaveFileName(&open_filename))
 	{
 		io_access::to_file(std::string(szFileName), data);
 	}
