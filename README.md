@@ -19,6 +19,7 @@ Since it's very outdated, I've decided to not only update it, but make the whole
   - Formatting is (rather) poor. That can be circumvented by creating your own Excel spreadsheet from provided CSV file;
   - There might be some factual errors (there should not be any, but who knows?). Feedback is much appreciated!
 - Numerical values are represented in scientific format, because you can then multiply "IM exp per ???" values by powers of 10 easily (hopefully). If you dislike the format you can freely change it.
+- If you are wondering why there are two programs instead of just one, item_maker_api.exe is written in C++ and item_maker_excel.exe is written in C#/.NET; fusing these two would be real pain in the back.
 - If the program doesn't work, please issue an issue in **Issues** tracker. The error might be caused by:
   - Tukkun breaking structure of the code;
   - your PC not satisfying **Requirements**;
