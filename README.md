@@ -54,3 +54,8 @@ Since it's very outdated, I've decided to not only update it, but make the whole
 
 ## Links list:
 - [folder with .xlsx spreadsheets](https://drive.google.com/drive/folders/0B3BzoLHkt-KAeE5kRzNEMk45amM)
+  - after clicking link you will reach read-only folder with spreadsheets inside;
+  - since Google Sheets is weird, it does not recognize values as numerical, therefore:
+    - to get ascending sort, hover over column names (such as A, B, J), click little square-ish button on the right side and select _Sort A-Z_;
+    - to get descending sort, click _Sort Z-A_ instead;
+    - you might want to disable _Temporary filter_ notification by clicking X on the right size.
