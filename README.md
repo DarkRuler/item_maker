@@ -53,4 +53,4 @@ Since it's very outdated, I've decided to not only update it, but make the whole
 ***Warning: I think these requirements are correct; I will determine exact requirements when I have access to another machine with Excel.***
 
 ## Links list:
-- [v1809](https://drive.google.com/open?id=0B3BzoLHkt-KAeExyUWx0RjFac0k)
+- [folder with .xlsx spreadsheets](https://drive.google.com/drive/folders/0B3BzoLHkt-KAeE5kRzNEMk45amM)
