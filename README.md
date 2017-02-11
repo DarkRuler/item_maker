@@ -1,5 +1,8 @@
 # item_maker
 
+## Preface
+Since it's my first (somewhat) serious Github release, I might have set it up incorrectly, so... yeah. We'll see, I guess.
+
 ## For end-user:
 
 ### Description
