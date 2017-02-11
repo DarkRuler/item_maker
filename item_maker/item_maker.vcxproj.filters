@@ -5,22 +5,25 @@
     <ClCompile Include="item_csv_maker.cpp">
       <Filter>item_csv_maker</Filter>
     </ClCompile>
-    <ClCompile Include="source_code_provider.cpp">
-      <Filter>source_code_provider</Filter>
-    </ClCompile>
     <ClCompile Include="item_csv_parser.cpp">
       <Filter>item_csv_parser</Filter>
     </ClCompile>
     <ClCompile Include="items_info.cpp">
       <Filter>items_info</Filter>
     </ClCompile>
+    <ClCompile Include="refined_items_info.cpp">
+      <Filter>refined_items_info</Filter>
+    </ClCompile>
+    <ClCompile Include="csv_toolset.cpp">
+      <Filter>csv_toolset</Filter>
+    </ClCompile>
+    <ClCompile Include="io_access.cpp">
+      <Filter>io_access</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="item_csv_maker">
       <UniqueIdentifier>{aadf0f9a-952f-46ef-8176-aff6e71f5a1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="source_code_provider">
-      <UniqueIdentifier>{c42efc9e-a305-4c34-bd80-d83599fdc484}</UniqueIdentifier>
     </Filter>
     <Filter Include="item_csv_parser">
       <UniqueIdentifier>{268ba622-7db2-45c7-bf5f-c6feb08a1e9c}</UniqueIdentifier>
@@ -28,19 +31,34 @@
     <Filter Include="items_info">
       <UniqueIdentifier>{f2029967-67e7-4286-9199-8b9f3c21fb41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="refined_items_info">
+      <UniqueIdentifier>{e22b39fe-d490-45af-b2ee-9d2396a7d127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="csv_toolset">
+      <UniqueIdentifier>{c8d3dc9c-aa24-43df-81aa-09db4f6446e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io_access">
+      <UniqueIdentifier>{c42efc9e-a305-4c34-bd80-d83599fdc484}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="item_csv_maker.h">
       <Filter>item_csv_maker</Filter>
-    </ClInclude>
-    <ClInclude Include="source_code_provider.h">
-      <Filter>source_code_provider</Filter>
     </ClInclude>
     <ClInclude Include="item_csv_parser.h">
       <Filter>item_csv_parser</Filter>
     </ClInclude>
     <ClInclude Include="items_info.h">
       <Filter>items_info</Filter>
+    </ClInclude>
+    <ClInclude Include="refined_items_info.h">
+      <Filter>refined_items_info</Filter>
+    </ClInclude>
+    <ClInclude Include="csv_toolset.h">
+      <Filter>csv_toolset</Filter>
+    </ClInclude>
+    <ClInclude Include="io_access.h">
+      <Filter>io_access</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

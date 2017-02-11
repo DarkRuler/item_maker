@@ -11,9 +11,7 @@ private:
 		std::vector<std::vector<std::string>> items_info;
 	};
 
-	static std::vector<std::string> delimit_csv_line(const std::string& csv, char delimiter = ',');
 	static specific_type_delimited_csv delimit_csv_of_specific_type(const item_csv_maker::specific_type_csv& specific_type_csv);
-
 	typedef std::unordered_map<std::string, specific_type_delimited_csv> delimited_csv;
 	static delimited_csv delimit_csv(const std::unordered_map<std::string, item_csv_maker::specific_type_csv>& csv);
 

@@ -1,36 +1,9 @@
 #include "item_csv_parser.h"
+#include "csv_toolset.h"
+
 #include <algorithm>
 #include <functional>
 #include <set>
-
-std::vector<std::string> item_csv_parser::delimit_csv_line(const std::string & csv, char delimiter)
-{
-	auto delimited_values = std::vector<std::string>();
-	auto temporary_string = std::string();
-
-	bool is_in_string = false;
-
-	for (auto char_iterator = csv.begin(); char_iterator != csv.end(); char_iterator++)
-	{
-		if (*char_iterator == '\\') char_iterator++;
-
-		else if (*char_iterator == '\'') is_in_string = !is_in_string;
-
-		else if (*char_iterator == delimiter && !is_in_string)
-		{
-			delimited_values.push_back(temporary_string);
-			temporary_string.clear();
-		}
-
-		else if (*char_iterator == ' ' && !is_in_string) continue;
-
-		else temporary_string += *char_iterator;
-	}
-
-	delimited_values.push_back(temporary_string);
-
-	return delimited_values;
-}
 
 item_csv_parser::specific_type_delimited_csv item_csv_parser::delimit_csv_of_specific_type(const item_csv_maker::specific_type_csv& specific_type_csv)
 {
@@ -38,10 +11,10 @@ item_csv_parser::specific_type_delimited_csv item_csv_parser::delimit_csv_of_spe
 	
 	for (auto item_csv : specific_type_csv.items_csv)
 	{
-		delimited_items_info.push_back(delimit_csv_line(item_csv));
+		delimited_items_info.push_back(csv_toolset::delimit_csv(item_csv.begin(), item_csv.end(), ','));
 	}
 
-	return{ delimit_csv_line(specific_type_csv.type_header_csv), delimited_items_info };
+	return { csv_toolset::delimit_csv(specific_type_csv.type_header_csv.begin(), specific_type_csv.type_header_csv.end(), ','), delimited_items_info };
 }
 
 item_csv_parser::delimited_csv item_csv_parser::delimit_csv(const std::unordered_map<std::string, item_csv_maker::specific_type_csv>& csv)
@@ -86,7 +59,7 @@ std::vector<std::string> item_csv_parser::restrict_header(const std::vector<std:
 		for (auto permittable_parameter : header)
 		{
 			if (std::find(restricted_parameters.begin(), restricted_parameters.end(), permittable_parameter) == restricted_parameters.end())
-				header_copy.erase(std::remove(header_copy.begin(), header_copy.end(), permittable_parameter));
+				header_copy.erase(std::remove(header_copy.begin(), header_copy.end(), permittable_parameter), header_copy.end());
 		}
 
 		return header_copy;

@@ -1,12 +1,11 @@
-#include "source_code_provider.h"
+#include "io_access.h"
 #include <fstream>
 
-std::string source_code_provider::from_file(std::string filename)
+std::string io_access::from_file(std::string filename)
 {
 	std::fstream source_code;
 	source_code.open(filename.c_str(), std::ios::in);
-
-	if (!source_code) throw std::exception(std::string("Exception @ import_source_code: Opening source file " + filename + " failed.").c_str());
+	if (!source_code) return "";
 
 	std::string source_code_text;
 
@@ -18,4 +17,14 @@ std::string source_code_provider::from_file(std::string filename)
 	source_code.close();
 
 	return source_code_text;
+}
+
+void io_access::to_file(std::string filename, std::string data)
+{
+	std::fstream output_file;
+	output_file.open(filename.c_str(), std::ios::out);
+	if (!output_file) return;
+
+	output_file.write(data.c_str(), data.size());
+	output_file.close();
 }
