@@ -14,14 +14,18 @@ Since it's very outdated, I've decided to not only update it, but make the whole
 **Also, at the end of this README.md should be some sort of list of links to cloud drive, where spreadsheets will be stored. (The ULTRA lazy version).**
 
 ### Notes
-- You might notice that (unlike pw's guide) this one does not generate summaries or ranks. This is caused by two things:
-  - the spreadsheet it automatically generated, so it's quite hard to make it look nice, and I don't care enough;
-  - I decided that you should be able to search through data yourself and pick best option depending on your resources.
+- You might notice that (unlike pw's guide) this one does not generate summaries or ranks. Instead, I decided that you should be able to search through data yourself and pick best option depending on your resources.
+- Because Excel spreadsheet is automatically generated:
+  - Formatting is (rather) poor. That can be circumvented by creating your own Excel spreadsheet from provided CSV file;
+  - There might be some factual errors (there should not be any, but who knows?). Feedback is much appreciated!
+- Numerical values are represented in scientific format, because you can then multiply "IM exp per ???" values by powers of 10 easily (hopefully). If you dislike the format you can freely change it.
 - If the program doesn't work, please issue an issue in **Issues** tracker. The error might be caused by:
   - Tukkun breaking structure of the code;
   - your PC not satisfying **Requirements**;
   - something machine-dependent I couldn't possibly predict.
 - If you want to suggest something, you can use **Issues** or forum thread (I know **Issues** should not be used for that, but whatever). The forum thread is also perfect place for user-made charts and rankings.
+- If there are grammatical errors within this README.md, point them out (**Issues** again?), but don't be grammar Nazi.
+- Your kind words of appreciation are appreciated :)
 
 ## Technical info:
 
