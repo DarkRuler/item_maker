@@ -20,6 +20,9 @@
     <ClCompile Include="io_access.cpp">
       <Filter>io_access</Filter>
     </ClCompile>
+    <ClCompile Include="file_dialog.cpp">
+      <Filter>file_dialog</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="item_csv_maker">
@@ -40,6 +43,9 @@
     <Filter Include="io_access">
       <UniqueIdentifier>{c42efc9e-a305-4c34-bd80-d83599fdc484}</UniqueIdentifier>
     </Filter>
+    <Filter Include="file_dialog">
+      <UniqueIdentifier>{a6e88de0-deb2-46e4-9f38-c85707ee52e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="item_csv_maker.h">
@@ -59,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="io_access.h">
       <Filter>io_access</Filter>
+    </ClInclude>
+    <ClInclude Include="file_dialog.h">
+      <Filter>file_dialog</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

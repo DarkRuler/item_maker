@@ -2,10 +2,12 @@
 #include "item_csv_maker.h"
 #include "item_csv_parser.h"
 #include "refined_items_info.h"
+#include "file_dialog.h"
 
 int main(int argc, char** argv)
 {
-	std::string source_code = io_access::from_file("ATG_-_Revive.flr");
+	/*std::string source_code = io_access::from_file("ATG_-_Revive.flr");*/
+	std::string source_code = file_dialog::open_file();
 
 	auto _item_csv_maker = item_csv_maker();
 	_item_csv_maker.provide_source_code(std::move(source_code));
@@ -23,11 +25,10 @@ int main(int argc, char** argv)
 	_refined_items_info.rename_parameters({ {"recipeType", "Recipe Type"}, {"costPixel", "Pixel"}, {"costCraft", "Crafting Material"}, {"costSpec", "Special Resource"}, {"careerExp", "IM exp"}, {"name", "Item Name"} });	
 	_refined_items_info.insert_special_resources_columns(refined_items_info::current_special_resource_map(), "Superior Crafting Material", "Special Resource Name", "Special Resource");
 	_refined_items_info.remove_parameter_column("Special Resource");
-	_refined_items_info.insert_im_exp_per_resource_columns(refined_items_info::resources_columns_names(), "IM exp");
-	//_refined_items_info.sort("IM exp per Pixel", refined_items_info::descending_double_compare_functor());
+	_refined_items_info.insert_im_exp_per_resource_columns(refined_items_info::resources_columns_names(), "IM exp");	
 	
 	std::string csv = _refined_items_info.generate_csv('`');
-	io_access::to_file("refined_items_info.csv", csv);
+	file_dialog::save_as(csv);
 
 	return EXIT_SUCCESS;
 }

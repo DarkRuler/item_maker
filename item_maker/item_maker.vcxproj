@@ -22,6 +22,7 @@
     <ProjectGuid>{D3C96949-135D-4A68-876D-9D676D602E22}</ProjectGuid>
     <RootNamespace>item_maker</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>item_maker_api</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -111,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="csv_toolset.cpp" />
+    <ClCompile Include="file_dialog.cpp" />
     <ClCompile Include="item_csv_maker.cpp" />
     <ClCompile Include="item_csv_parser.cpp" />
     <ClCompile Include="items_info.cpp" />
@@ -120,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="csv_toolset.h" />
+    <ClInclude Include="file_dialog.h" />
     <ClInclude Include="item_csv_maker.h" />
     <ClInclude Include="item_csv_parser.h" />
     <ClInclude Include="items_info.h" />
