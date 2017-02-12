@@ -11,7 +11,7 @@ std::vector<std::string> csv_toolset::delimit_csv(std::string::const_iterator cs
 	{
 		if (*char_iterator == '\\') char_iterator++;
 
-		else if (*char_iterator == '\'') is_in_string = !is_in_string;
+		else if (*char_iterator == '\'' || *char_iterator == '\"') is_in_string = !is_in_string;
 
 		else if (*char_iterator == delimiter && !is_in_string)
 		{
